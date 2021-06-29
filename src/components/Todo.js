@@ -32,6 +32,9 @@ const Todo = ({todo}) => {
                 <div className="rounded-full w-8 h-8  text-gray-500" onClick={todoComplete}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" className="w-full h-full" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/></svg>
                 </div>
+                <div className="rounded-full w-8 h-8 mt-4 ml-1 text-red-500" onClick={todoDelete}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" className="transform scale-75" fill="currentColor" height="24" viewBox="0 0 24 24"><path d="M3 6v18h18v-18h-18zm5 14c0 .552-.448 1-1 1s-1-.448-1-1v-10c0-.552.448-1 1-1s1 .448 1 1v10zm5 0c0 .552-.448 1-1 1s-1-.448-1-1v-10c0-.552.448-1 1-1s1 .448 1 1v10zm5 0c0 .552-.448 1-1 1s-1-.448-1-1v-10c0-.552.448-1 1-1s1 .448 1 1v10zm4-18v2h-20v-2h5.711c.9 0 1.631-1.099 1.631-2h5.315c0 .901.73 2 1.631 2h5.712z"/></svg>
+                </div>
             </div>
             <div className="clearfix"></div>
         </div>
