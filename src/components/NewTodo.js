@@ -8,6 +8,7 @@ const NewTodo = (props) => {
     // const [id, setId] = useState('');
     const [date, setDate] = useState('');
     const [time, setTime] = useState('');
+    const [description, setDescription] = useState('');
     const [todos, setTodos] = useState(props.todos);
 
     const handleSubmit=(e)=>{
@@ -15,7 +16,7 @@ const NewTodo = (props) => {
         if(date && time && activity){
             // setId(todos.length+1);
             const todo = {
-                activity, date, time, complete:false}; 
+                activity, date, time, description, important:false, complete:false}; 
             setTodos((todos)=>{
                 return [...todos, todo]
             })
@@ -39,8 +40,8 @@ const NewTodo = (props) => {
 
     return (
          props.newTodo && (
-        <div className="h-screen w-full fixed top-0 left-0">
-            <div className="new-form absolute top-8 z-30 left-12 w-3/4" onClick={
+        <div className=" w-full fixed top-0 left-0">
+            <div className="new-form absolute top-8 z-30 left-1/4 w-1/2" onClick={
                 ()=>{
                     console.log("testing");
                 }
@@ -76,6 +77,15 @@ const NewTodo = (props) => {
                             </div>
                             <div className="clearfix"></div>
                         </div>
+                        <div className="w-full mt-4">
+                                <label htmlFor="description">Description</label>
+                                <textarea
+                                value={description}
+                                onChange={(e)=>setDescription(e.target.value)}
+                                    type="time" name="time" id="time" className="w-full border border-gray-300 border-solid px-4 py-2 rounded-sm mt-2 focus:border-orange-500 focus:outline-none" placeholder="eg. Washing clothes" >
+
+                                </textarea>
+                    </div>
                         <div className="more my-4 text-sm text-gray-500">
                                 More Fields
                             </div>

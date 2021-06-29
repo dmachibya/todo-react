@@ -15,17 +15,23 @@ const Todo = ({todo}) => {
         });
         console.log("attempting complete");  
     }
+    const todoImportant = () =>{
+        const todoRef = firebase.database().ref("Todo").child(todo.id)
+        todoRef.update({
+            important: !todo.important,
+        });
+        console.log("attempting complete");  
+    }
 
         
     return (
         <div className={"taskborder-b px-8 py-4 border-gray-300 border-b border-solid "+(todo.complete?'bg-green-200':'')} key={todo.id}>
-            <div className="w-1/6 float-left">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
+            <div className="w-1/6 float-left text-yellow-500" onClick={todoImportant}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill={todo.important?'currentColor':'none'} stroke="currentColor" stoke strokeWidth="2" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z"/></svg>
             </div>
             <div className="w-4/6 float-left text-left">
                 <p>{todo.activity}</p>
                 <p className="text-sm italic">{todo.date} || {todo.time}</p>
-                <button onClick={todoDelete}>delete</button> 
                 {/* <button>complete</button> */}
             </div>
             <div className="w-1/6 float-left">
