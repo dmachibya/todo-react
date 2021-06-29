@@ -5,7 +5,7 @@ const NewTodo = (props) => {
     // const {newTodo} = props; 
     
     const [activity, setActivity] = useState('');
-    const [id, setId] = useState('');
+    // const [id, setId] = useState('');
     const [date, setDate] = useState('');
     const [time, setTime] = useState('');
     const [todos, setTodos] = useState(props.todos);
@@ -22,7 +22,7 @@ const NewTodo = (props) => {
             setActivity('');
             setDate('');
             setTime('');
-            setId('');
+            // setId('');
 
             const todoRef = firebase.database().ref('Todo');
             // const todo_ = {

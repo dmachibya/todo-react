@@ -9,13 +9,13 @@ import {useEffect, useState} from 'react'
 import './state/main';
 
 function App() {
-  const [menu, setMenu] = useState()
+  // const [menu, setMenu] = useState()
   const [globalNewTodo, setGlobalNewTodo] = useState(false)
   const [todos, setTodos] = useState([]);
 
   useEffect(()=>{
     // setNewTodo(newTodoState);
-  }, [0]);
+  }, []);
 
   return (
     <div className="App max-w-2xl mx-auto">
