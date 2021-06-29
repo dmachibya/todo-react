@@ -25,3 +25,7 @@ code {
   content: "";
   display: table;
 }
+
+.bt-300 {
+  background-color: rgba(0, 0, 0, 0.3);
+}
