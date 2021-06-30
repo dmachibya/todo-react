@@ -41,7 +41,7 @@ const NewTodo = (props) => {
     return (
          props.newTodo && (
         <div className=" w-full fixed top-0 left-0">
-            <div className="new-form absolute top-8 z-30 left-1/4 w-1/2" onClick={
+            <div className="new-form absolute top-8 z-30 md:left-1/4 md:w-1/2" onClick={
                 ()=>{
                     console.log("testing");
                 }
